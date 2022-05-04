@@ -1,0 +1,11 @@
+{
+    "name": "plo_test_design",
+    "version": "1.0.0",
+    "description": "plo skate club test site",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --watch ./sass/main.scss:./css/style.css"
+    },
+    "author": "CTRL",
+    "license": "ISC"
+}
