@@ -26,8 +26,8 @@ $light-grey: #F4F3F5;
 @mixin btn($right,
 $top) {
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     top: $top;
     right: $right;
     transition-duration: 0.5s;
@@ -39,7 +39,7 @@ $width) {
     position: absolute;
     height: $height;
     width: $width;
-    top: 30px;
+    top: 20px;
     background-color: $cream;
 }
 
@@ -68,21 +68,21 @@ $top) {
 }
 
 .burger-button {
-    @include btn(30px,
-    6px);
+    @include btn(20px,
+    18px);
     display: none;
     .icon-left {
-        @include icon(8px,
+        @include icon(5px,
         30px);
         left: 0px;
         &:before {
-            @include icon-before(8px,
-            30px,
+            @include icon-before(5px,
+            20px,
             -20px);
         }
         &:after {
-            @include icon-after(8px,
-            30px,
+            @include icon-after(5px,
+            20px,
             20px);
         }
         &:hover {
@@ -90,17 +90,17 @@ $top) {
         }
     }
     .icon-right {
-        @include icon(8px,
-        30px);
-        left: 30px;
+        @include icon(5px,
+        20px);
+        left: 20px;
         &:before {
-            @include icon-before(8px,
-            30px,
+            @include icon-before(5px,
+            20px,
             -20px);
         }
         &:after {
-            @include icon-after(8px,
-            30px,
+            @include icon-after(5px,
+            20px,
             20px);
         }
     }
@@ -153,7 +153,6 @@ p {
 }
 
 ul {
-    margin-left: 20px;
     li {
         margin-top: 5px;
         font-family: Arial, Helvetica, sans-serif;
@@ -307,7 +306,6 @@ html {
                     flex-wrap: wrap;
                     list-style-type: none;
                     li {
-                        width: 25%;
                         margin: 20px;
                         font-family: Arial, Helvetica, sans-serif;
                         font-size: 1.5em;
@@ -625,7 +623,7 @@ html {
 
 /* TABLET LANDSCAPE*/
 
-@media (max-width: 1280px) {
+@media (max-width: 960px) {
     html {
         body {
             #nav {
@@ -711,9 +709,22 @@ html {
                     max-width: 80%;
                 }
             }
+            section#header::after {
+                content: "";
+                position: absolute;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.1);
+            }
             section#header {
+                flex-direction: column;
                 .left {
                     width: 100%;
+                    filter: grayscale(100%);
+                    background-image: url(../img/plo-header.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
                     .title {
                         width: 100%;
                         h1 {
@@ -721,6 +732,16 @@ html {
                             width: 100%;
                             font-size: 20vw;
                             line-height: normal;
+                            color: $cream;
+                        }
+                    }
+                    .activities {
+                        display: none;
+                    }
+                    .address {
+                        p {
+                            color: $cream;
+                            font-size: 16px;
                         }
                     }
                 }

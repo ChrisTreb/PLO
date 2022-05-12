@@ -11,27 +11,27 @@
 /* BURGER MENU */
 .burger-button {
   position: absolute;
-  width: 60px;
-  height: 60px;
-  top: 6px;
-  right: 30px;
+  width: 45px;
+  height: 45px;
+  top: 18px;
+  right: 20px;
   transition-duration: 0.5s;
   display: none;
 }
 .burger-button .icon-left {
   transition-duration: 0.5s;
   position: absolute;
-  height: 8px;
+  height: 5px;
   width: 30px;
-  top: 30px;
+  top: 20px;
   background-color: #FFFBF1;
   left: 0px;
 }
 .burger-button .icon-left:before {
   transition-duration: 0.5s;
   position: absolute;
-  width: 30px;
-  height: 8px;
+  width: 20px;
+  height: 5px;
   background-color: #FFFBF1;
   content: "";
   top: -20px;
@@ -39,8 +39,8 @@
 .burger-button .icon-left:after {
   transition-duration: 0.5s;
   position: absolute;
-  width: 30px;
-  height: 8px;
+  width: 20px;
+  height: 5px;
   background-color: #FFFBF1;
   content: "";
   top: 20px;
@@ -51,17 +51,17 @@
 .burger-button .icon-right {
   transition-duration: 0.5s;
   position: absolute;
-  height: 8px;
-  width: 30px;
-  top: 30px;
+  height: 5px;
+  width: 20px;
+  top: 20px;
   background-color: #FFFBF1;
-  left: 30px;
+  left: 20px;
 }
 .burger-button .icon-right:before {
   transition-duration: 0.5s;
   position: absolute;
-  width: 30px;
-  height: 8px;
+  width: 20px;
+  height: 5px;
   background-color: #FFFBF1;
   content: "";
   top: -20px;
@@ -69,8 +69,8 @@
 .burger-button .icon-right:after {
   transition-duration: 0.5s;
   position: absolute;
-  width: 30px;
-  height: 8px;
+  width: 20px;
+  height: 5px;
   background-color: #FFFBF1;
   content: "";
   top: 20px;
@@ -118,9 +118,6 @@ p {
   font-size: 18px;
 }
 
-ul {
-  margin-left: 20px;
-}
 ul li {
   margin-top: 5px;
   font-family: Arial, Helvetica, sans-serif;
@@ -277,7 +274,6 @@ html body section#header .left ul {
   list-style-type: none;
 }
 html body section#header .left ul li {
-  width: 25%;
   margin: 20px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5em;
@@ -581,7 +577,7 @@ html body footer div.social-icons a i {
 }
 
 /* TABLET LANDSCAPE*/
-@media (max-width: 1280px) {
+@media (max-width: 960px) {
   html body #nav #menu {
     display: none;
     padding: 50px 5%;
@@ -635,8 +631,23 @@ html body footer div.social-icons a i {
   html body #loader .img-loader {
     max-width: 80%;
   }
+  html body section#header::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  html body section#header {
+    flex-direction: column;
+  }
   html body section#header .left {
     width: 100%;
+    filter: grayscale(100%);
+    background-image: url(../img/plo-header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   html body section#header .left .title {
     width: 100%;
@@ -646,6 +657,14 @@ html body footer div.social-icons a i {
     width: 100%;
     font-size: 20vw;
     line-height: normal;
+    color: #FFFBF1;
+  }
+  html body section#header .left .activities {
+    display: none;
+  }
+  html body section#header .left .address p {
+    color: #FFFBF1;
+    font-size: 16px;
   }
   html body section#header .right {
     display: none;
