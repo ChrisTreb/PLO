@@ -1,4 +1,7 @@
+/* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+/* Colors */
+/* CSS */
 * {
   padding: 0;
   margin: 0;
@@ -197,6 +200,19 @@ html body {
   /* INFOS */
   /* NEWS */
   /* CONTACT */
+}
+html body #loader {
+  z-index: 10000;
+  background-color: #1a1a1a;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body #loader .img-loader {
+  animation: rotation 5s infinite linear;
 }
 html body #nav {
   z-index: 1000;
@@ -616,6 +632,9 @@ html body footer div.social-icons a i {
     margin-left: 0;
   }
 
+  html body #loader .img-loader {
+    max-width: 80%;
+  }
   html body section#header .left {
     width: 100%;
   }
@@ -677,6 +696,9 @@ html body footer div.social-icons a i {
     margin-left: 0;
   }
 
+  html body #loader .img-loader {
+    max-height: 80%;
+  }
   html body #nav #menu {
     padding: 10px 50px;
   }
@@ -720,7 +742,7 @@ html body footer div.social-icons a i {
   }
   html body #infos .infos-container div.info-text p {
     text-align: left;
-    font-size: 9vw;
+    font-size: 5vw;
   }
   html body #contact {
     padding: 0 2%;
@@ -744,6 +766,15 @@ html body footer div.social-icons a i {
   }
   html body footer div.social-icons {
     margin-left: 10px;
+  }
+}
+/* ANIMATION */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 

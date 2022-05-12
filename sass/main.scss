@@ -1,10 +1,19 @@
+/* Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 $font-russo-one: 'Russo One',
 sans-serif;
+
+/* Colors */
+
 $black: #050505;
 $dark-grey: #1a1a1a;
 $pink :#E7306B;
 $cream: #FFFBF1;
+$light-grey: #F4F3F5;
+
+/* CSS */
+
 * {
     padding: 0;
     margin: 0;
@@ -224,6 +233,19 @@ html {
         max-width: 100vw;
         height: auto;
         background-color: $cream;
+        #loader {
+            z-index: 10000;
+            background-color: $dark-grey;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .img-loader {
+                animation: rotation 5s infinite linear;
+            }
+        }
         #nav {
             z-index: 1000;
             display: flex;
@@ -684,6 +706,11 @@ html {
     }
     html {
         body {
+            #loader {
+                .img-loader {
+                    max-width: 80%;
+                }
+            }
             section#header {
                 .left {
                     width: 100%;
@@ -759,6 +786,11 @@ html {
     }
     html {
         body {
+            #loader {
+                .img-loader {
+                    max-height: 80%;
+                }
+            }
             #nav {
                 #menu {
                     padding: 10px 50px;
@@ -805,7 +837,7 @@ html {
                         width: 100%;
                         p {
                             text-align: left;
-                            font-size: 9vw;
+                            font-size: 5vw;
                         }
                     }
                 }
@@ -836,5 +868,17 @@ html {
                 }
             }
         }
+    }
+}
+
+
+/* ANIMATION */
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
